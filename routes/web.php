@@ -24,18 +24,18 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 Route::middleware(['auth'])->group(function () {
 
     /*
-    
+
      Dashboard
-    
+
     */
     Route::get('/', function () {
         $user = Auth::user();
 
-        $tasksCount   = $user->tasks()->count();
-        $filesCount   = $user->files()->count();
+        $tasksCount = $user->tasks()->count();
+        $filesCount = $user->files()->count();
         $projectsCount = $user->projects()->count();
 
-        $recentTasks  = $user->tasks()->latest()->take(5)->get();
+        $recentTasks = $user->tasks()->latest()->take(5)->get();
 
         return view('dashboard', compact(
             'tasksCount',
@@ -46,9 +46,9 @@ Route::middleware(['auth'])->group(function () {
     })->name('dashboard');
 
     /*
-    
+
      Projects
-    
+
     */
     Route::resource('projects', ProjectController::class);
 
@@ -64,9 +64,9 @@ Route::middleware(['auth'])->group(function () {
         ->name('projects.tasks.store');
 
     /*
-    
+
      Tasks
-    
+
     */
     Route::get('tasks/{task}', [TaskController::class, 'show'])
         ->name('tasks.show');
@@ -78,9 +78,9 @@ Route::middleware(['auth'])->group(function () {
         ->name('tasks.update-status');
 
     /*
-    
+
      Files (Tệp)
-    
+
     */
     Route::resource('files', FileController::class);
 });
