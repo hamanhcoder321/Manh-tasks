@@ -58,8 +58,7 @@
                                     </h5>
 
                                     <p class="card-text">{{ $task->description }}</p>
-                                    <a href="{{ route('tasks.show', $task->id) }}" class="btn btn-primary btn-sm"><i
-                                            class="bi bi-eye"></i></a>
+
                                 </div>
                             </div>
                         @endforeach
@@ -82,8 +81,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $task->title }}</h5>
                                     <p class="card-text">{{ $task->description }}</p>
-                                    <a href="{{ route('tasks.show', $task->id) }}" class="btn btn-warning btn-sm"><i
-                                            class="bi bi-eye"></i></a>
+
                                 </div>
                             </div>
                         @endforeach
@@ -105,8 +103,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $task->title }}</h5>
                                     <p class="card-text">{{ $task->description }}</p>
-                                    <a href="{{ route('tasks.show', $task->id) }}" class="btn btn-success btn-sm"><i
-                                            class="bi bi-eye"></i></a>
+
                                 </div>
                             </div>
                         @endforeach
