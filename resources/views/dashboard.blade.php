@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <h2>Chào mừng đến Dashboard</h2>
-        <p>Đây là trang tổng quan nơi bạn có thể quản lý các nhiệm vụ, lịch trình, ghi chú, và tệp tin</p>
+        <p>Đây là trang tổng quan nơi bạn có thể quản lý các module nhiệm vụ, dự án, và tệp tin</p>
         
         <div class="row mb-4">
             <div class="col-md-3 mb-4">
