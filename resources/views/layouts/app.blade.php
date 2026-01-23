@@ -176,7 +176,7 @@
         </main>
         <footer class="mt-auto py-3 text-center">
             <div class="container">
-                <span class="text-muted">&copy; {{ date('Y') }} Task Manager | Manh  </span>
+                <span class="text-muted">@ {{ date('Y') }} Task Manager | Manh  </span>
             </div>
         </footer>
     </div>
