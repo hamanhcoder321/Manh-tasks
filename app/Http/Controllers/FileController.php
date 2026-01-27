@@ -35,7 +35,7 @@ class FileController extends Controller
             'type' => $request->type,
         ]);
 
-        return redirect()->route('files.index')->with('success', 'File uploaded successfully.');
+        return redirect()->route('files.index')->with('success', 'Upload file thành công.');
     }
 
     public function edit(File $file)
@@ -60,13 +60,13 @@ class FileController extends Controller
 
         $file->update($data);
 
-        return redirect()->route('files.index')->with('success', 'File updated successfully.');
+        return redirect()->route('files.index')->with('success', 'updated file thành công.');
     }
 
     public function destroy(File $file)
     {
         Storage::disk('public')->delete($file->path);
         $file->delete();
-        return redirect()->route('files.index')->with('success', 'File deleted successfully.');
+        return redirect()->route('files.index')->with('success', 'deleted file thành công.');
     }
 }
