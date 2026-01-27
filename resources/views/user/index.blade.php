@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Người dùng
+   Danh sách người dùng
 @endsection
 @section('content')
 
