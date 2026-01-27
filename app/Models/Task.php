@@ -8,7 +8,7 @@ class Task extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    protected $fillable = [ // cho phép gán dũ liệu hàng loạt
         'user_id',
         'project_id',
         'title',
@@ -18,16 +18,21 @@ class Task extends Model
         'status',
     ];
 
+
+    // Quan hệ giữa Task và User, mỗi Task thuộc về 1 User
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class); // belongsTo quan hệ 1-nhiều
     }
 
+
+    // Quan hệ giữa Task và Project, mỗi Task thuộc về 1 Project
     public function project()
     {
         return $this->belongsTo(Project::class);
     }
 
+    // Accessor để lấy màu sắc dựa trên ưu tiên
     public function getStatusColorAttribute()
     {
         switch ($this->status) {

@@ -387,6 +387,13 @@
                     <i class="bi bi-folder"></i> Dự án
                 </a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{ request()->is('users*') ? 'active' : '' }}" href="{{ route('user.index') }}">
+                    <i class="bi bi-people"></i> Người dùng
+                </a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link {{ request()->is('tasks*') ? 'active' : '' }}" href="{{ route('projects.index') }}">
                     <i class="bi bi-check2-square"></i> Nhiệm vụ
